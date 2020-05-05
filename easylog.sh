@@ -16,7 +16,7 @@ echo ""
 # create folders if they don't exist
 [[ -d $EasyLOG_DIR ]] && echo "Directory: $EasyLOG_DIR Exists!" || (echo "Directory: $EasyLOG_DIR does not exist, creating.."; mkdir $EasyLOG_DIR)
 
-#defulat log values; replace in your own script
+#default log values; replace in your own script
 EasyLOG_HEADER=${EasyLOG_HEADER:-"\
 ################################# \n\
 -- Log file for: $EasyLOG_SCRIPT_NAME \n\
