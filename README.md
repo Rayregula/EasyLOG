@@ -7,7 +7,7 @@
 
 ###### When creating a variable to override `EasyLOG_DATA` or `EasyLOG_HEADER` place a: "\n\\" after a string to create a new line in the log file.
 
-##### See Examples Below: 
+##### [See Examples Below:](https://github.com/Rayregula/EasyLOG#examples) 
 
  
 ## User Writable Values:
