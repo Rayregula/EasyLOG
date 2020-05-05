@@ -1,10 +1,11 @@
 #!/bin/sh
 ## create customized log files.
-## v0.0.5 By Jason Regula
+## v0.0.7 By Jason Regula
 
-VERSION="v0.0.5"
+VERSION="v0.0.7"
 CURRENTDATE=$(date "+%m-%d-%Y") # current date
-CURRENTTIME=$(date "+%I:%M %p") # current date
+CURRENTTIME=$(date "+%I:%M %p") # current time 12 hour clock
+CURRENTTIME24=$(date "+%H:%M") # current time 24 hour clock
 EasyLOG_NAME=${EasyLOG_NAME:-"EasyLOG-latest_$CURRENTDATE.txt"}
 EasyLOG_DIR=${EasyLOG_DIR:-$HOME/Documents/LOGS/}
 EasyLOG_SCRIPT_NAME=${EasyLOG_SCRIPT_NAME:-"EasyLOG.sh"}
@@ -19,7 +20,8 @@ echo ""
 EasyLOG_HEADER=${EasyLOG_HEADER:-"\
 ################################# \n\
 -- Log file for: $EasyLOG_SCRIPT_NAME \n\
--- EasyLOG Version: $VERSION \n\
+-- Created with EasyLOG \n\
+-- Version: $VERSION by Jason Regula \n\
 -- DATE: $CURRENTDATE TIME: $CURRENTTIME \n\
 ################################# \n\
 "}

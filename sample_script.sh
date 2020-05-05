@@ -6,9 +6,10 @@ SCRIPT_NAME="sample_script.sh"
 
 ## Config for log output.
 LOGFILE_DATA="\
-Sample Data: test sample\
+This is a sample log file \n\
 \n\
-FINDING time: $CURRENTDATE TIME: $CURRENTTIME
+Current User is $USER \n\
+The script working Directory is: $(pwd) \n\
 "
-## Overwrite builtin values and call script.
+## Overwrite built-in values and call script.
 EasyLOG_SCRIPT_NAME=$SCRIPT_NAME EasyLOG_DATA=$LOGFILE_DATA ./EasyLOG.sh
