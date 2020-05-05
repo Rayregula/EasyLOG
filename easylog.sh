@@ -1,8 +1,8 @@
 #!/bin/sh
-## create customized log files.
-## v0.0.7 By Jason Regula
+## Shell script for easily creating quick and custom log files.
+## v0.0.8 By Jason Regula
 
-VERSION="v0.0.7"
+VERSION="v0.0.8"
 CURRENTDATE=$(date "+%m-%d-%Y") # current date
 CURRENTTIME=$(date "+%I:%M %p") # current time 12 hour clock
 CURRENTTIME24=$(date "+%H:%M") # current time 24 hour clock
