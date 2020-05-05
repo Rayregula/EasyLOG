@@ -7,7 +7,7 @@ CURRENTDATE=$(date "+%m-%d-%Y") # current date
 CURRENTTIME=$(date "+%I:%M %p") # current date
 EasyLOG_NAME=${EasyLOG_NAME:-"EasyLOG-latest_$CURRENTDATE.txt"}
 EasyLOG_DIR=${EasyLOG_DIR:-$HOME/Documents/LOGS/}
-EasyLOG_SCRIPT_NAME=${EasyLOG_SCRIPT_NAME:-EasyLOG.sh}
+EasyLOG_SCRIPT_NAME=${EasyLOG_SCRIPT_NAME:-"EasyLOG.sh"}
 echo "EasyLOG.sh -- create easy log files"
 echo "Version $VERSION by Jason Regula"
 echo ""
@@ -18,6 +18,7 @@ echo ""
 #defulat log values; replace in your own script
 EasyLOG_HEADER=${EasyLOG_HEADER:-"\
 ################################# \n\
+-- Log file for: $EasyLOG_SCRIPT_NAME \n\
 -- EasyLOG Version: $VERSION \n\
 -- DATE: $CURRENTDATE TIME: $CURRENTTIME \n\
 ################################# \n\
@@ -31,6 +32,7 @@ EasyLOG_DATA=${EasyLOG_DATA:-"\
 # \n\
 # EasyLOG_NAME=Log_\$CURRENTDATE.txt #Name the log file will be saved with. \n\
 # EasyLOG_DIR=\$HOME/Documents/LOGS/ #Location files will be created. \n\
+# EasyLOG_SCRIPT_NAME=\${EasyLOG_SCRIPT_NAME:-EasyLOG.sh} #name of script that the log file was created by. \n\
 # EasyLOG_HEADER= #how the top of the log file will appear. \n\
 # EasyLOG_DATA= #the informaition to be entered in the body of the log file. \n\
 "}
