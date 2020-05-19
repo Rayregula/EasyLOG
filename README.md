@@ -1,11 +1,11 @@
 # EasyLOG
 ## Shell script for easily creating log files.
 ### Usage:
-1. Create a variable in your own script to replace `EasyLOG_DATA` and any additional options you want. <br/>
+1. Create a variable in your own script to replace defualt `EasyLOG_DATA` and any additional options you want. <br/>
 1. Overwrite default values and call EasyLOG.sh: `<EasyLOG Variable>=<User_Variable> [...] ./EasyLOG.sh`
 
 
-###### When creating a variable to override `EasyLOG_DATA` or `EasyLOG_HEADER` place a: "\n\\" after a string to create a new line in the log file.
+###### When creating a variable to override the defualt `EasyLOG_DATA` or `EasyLOG_HEADER` place a: "\n\\" after a string to create a new line in the log file.
 
 ##### [See Examples Below:](https://github.com/Rayregula/EasyLOG#examples) 
 
@@ -40,26 +40,25 @@
 ## Examples:
 ### Running the following script:
 ```bash
-!/bin/sh
-sample script for EasyLOG.sh
-v0.0.1 By Jason Regula
+#!/bin/sh
+## sample script for EasyLOG.sh
+## version 0.0.2 By Jason Regula
 
 SCRIPT_NAME="sample_script.sh"
 
-Config for log output.
+## Config for log output.
 LOGFILE_DATA="\
-This is a sample log file: \n\
+This is a sample log file \n\
 \n\
 Current User is $USER \n\
 The script working Directory is: $(pwd) \n\
 "
-Overwrite built-in values and call script.
-EasyLOG_SCRIPT_NAME=$SCRIPT_NAME 
-EasyLOG_DATA=$LOGFILE_DATA ./EasyLOG.sh
+## Overwrite EasyLOG built-in values and call script.
+EasyLOG_SCRIPT_NAME=$SCRIPT_NAME EasyLOG_DATA=$LOGFILE_DATA ./EasyLOG.sh
 ```	
 ### Will create a log with the following:
 
-```bash
+```
 ################################# 
 -- Log file for: sample_script.sh 
 -- Created with EasyLOG 
@@ -70,6 +69,6 @@ EasyLOG_DATA=$LOGFILE_DATA ./EasyLOG.sh
 
 This is a sample log file: 
 
-Current User is jason 
+Current User is jason
 The script working Directory is: /Users/jason/Documents/Projects/EasyLOG
 ``` 
