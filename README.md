@@ -39,34 +39,37 @@
 
 ## Examples:
 ### Running the following script:
+```bash
+!/bin/sh
+sample script for EasyLOG.sh
+v0.0.1 By Jason Regula
 
-	#!/bin/sh
-	## sample script for EasyLOG.sh
-	## v0.0.1 By Jason Regula
+SCRIPT_NAME="sample_script.sh"
 
-	SCRIPT_NAME="sample_script.sh"
-
-	## Config for log output.
-	LOGFILE_DATA="\
-	This is a sample log file: \n\
-	\n\
-	Current User is $USER \n\
-	The script working Directory is: $(pwd) \n\
-	"
-	## Overwrite built-in values and call script.
-	EasyLOG_SCRIPT_NAME=$SCRIPT_NAME EasyLOG_DATA=$LOGFILE_DATA ./EasyLOG.sh
-	
+Config for log output.
+LOGFILE_DATA="\
+This is a sample log file: \n\
+\n\
+Current User is $USER \n\
+The script working Directory is: $(pwd) \n\
+"
+Overwrite built-in values and call script.
+EasyLOG_SCRIPT_NAME=$SCRIPT_NAME 
+EasyLOG_DATA=$LOGFILE_DATA ./EasyLOG.sh
+```	
 ### Will create a log with the following:
 
-	################################# 
-	-- Log file for: sample_script.sh 
-	-- Created with EasyLOG 
-	-- Version: v0.0.5 by Jason Regula 
-	-- DATE: 05-05-2020 TIME: 03:46 AM 
-	################################# 
+```bash
+################################# 
+-- Log file for: sample_script.sh 
+-- Created with EasyLOG 
+-- Version: v0.0.5 by Jason Regula 
+-- DATE: 05-05-2020 TIME: 03:46 AM 
+################################# 
 
 
-	This is a sample log file: 
+This is a sample log file: 
 
-	Current User is jason 
-	The script working Directory is: /Users/jason/Documents/Projects/EasyLOG 
+Current User is jason 
+The script working Directory is: /Users/jason/Documents/Projects/EasyLOG
+``` 
