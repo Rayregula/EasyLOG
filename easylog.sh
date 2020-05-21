@@ -1,5 +1,6 @@
 #!/bin/sh
-## Shell script for easily creating quick and custom log files.
+## Shell script for easily creating quick and custom log files from within your own scripts.
+## by defining which arguments to print and then calling the script
 ## v0.0.8 By Jason Regula
 
 VERSION="v0.0.8"
@@ -40,11 +41,21 @@ EasyLOG_DATA=${EasyLOG_DATA:-"\
 "}
 
 
+EasyLOG_DATA2=${EasyLOG_DATA2:-""}
+
+
+EasyLOG_DATA3=${EasyLOG_DATA3:-""}
+
+
 function LOG_FORMAT() {
   echo $EasyLOG_HEADER
   echo ""
   echo $EasyLOG_DATA
   echo ""
+  echo $EasyLOG_DATA2
+  echo ""
+  echo $EasyLOG_DATA3
+
 }
 
 function CREATE_LOG() {
