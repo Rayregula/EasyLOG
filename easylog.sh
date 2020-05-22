@@ -3,13 +3,15 @@
 ## by defining which arguments to print and then calling the script
 ## v0.0.8 By Jason Regula
 
-VERSION="v0.0.8"
+VERSION="v0.0.9"
 CURRENTDATE=$(date "+%m-%d-%Y") # current date
 CURRENTTIME=$(date "+%I:%M %p") # current time 12 hour clock
 CURRENTTIME24=$(date "+%H:%M") # current time 24 hour clock
-EasyLOG_NAME=${EasyLOG_NAME:-"EasyLOG-latest_$CURRENTDATE.txt"}
+EasyLOG_FILENAME=${EasyLOG_FILENAME:-"$EasyLOG_SCRIPT_NAME\_$CURRENTDATE.txt"}
 EasyLOG_DIR=${EasyLOG_DIR:-$HOME/Documents/LOGS/}
 EasyLOG_SCRIPT_NAME=${EasyLOG_SCRIPT_NAME:-"EasyLOG.sh"}
+clear
+echo ""
 echo "EasyLOG.sh -- create easy log files"
 echo "Version $VERSION by Jason Regula"
 echo ""
@@ -38,6 +40,7 @@ EasyLOG_DATA=${EasyLOG_DATA:-"\
 # EasyLOG_SCRIPT_NAME=\${EasyLOG_SCRIPT_NAME:-EasyLOG.sh} #name of script that the log file was created by. \n\
 # EasyLOG_HEADER= #how the top of the log file will appear. \n\
 # EasyLOG_DATA= #the informaition to be entered in the body of the log file. \n\
+# See the README here: https://github.com/Rayregula/EasyLOG/blob/master/README.md
 "}
 
 
@@ -59,8 +62,11 @@ function LOG_FORMAT() {
 }
 
 function CREATE_LOG() {
-  LOG_FORMAT > $EasyLOG_DIR/$EasyLOG_NAME
+  LOG_FORMAT > $EasyLOG_DIR/$EasyLOG_FILENAME
 }
 
+echo ""
+echo "Log file created at $EasyLOG_DIR with name $EasyLOG_FILENAME"
+
 CREATE_LOG
-exit
+exit 0
