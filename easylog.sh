@@ -7,9 +7,10 @@ VERSION="v0.0.9"
 CURRENTDATE=$(date "+%m-%d-%Y") # current date
 CURRENTTIME=$(date "+%I:%M %p") # current time 12 hour clock
 CURRENTTIME24=$(date "+%H:%M") # current time 24 hour clock
-EasyLOG_FILENAME=${EasyLOG_FILENAME:-"$EasyLOG_SCRIPT_NAME\_$CURRENTDATE.txt"}
+EasyLOG_FILENAME=${EasyLOG_FILENAME:-"$EasyLOG_SCRIPT_NAME"\_"$CURRENTDATE.txt"}
 EasyLOG_DIR=${EasyLOG_DIR:-$HOME/Documents/LOGS/}
 EasyLOG_SCRIPT_NAME=${EasyLOG_SCRIPT_NAME:-"EasyLOG.sh"}
+EasyLOG_SCRIPT_NAMEINFO=${EasyLOG_SCRIPT_NAMEINFO:-""}
 clear
 echo ""
 echo "EasyLOG.sh -- create easy log files"
@@ -22,7 +23,7 @@ echo ""
 #default log values; replace in your own script
 EasyLOG_HEADER=${EasyLOG_HEADER:-"\
 ################################# \n\
--- Log file for: $EasyLOG_SCRIPT_NAME \n\
+-- Log file for: $EasyLOG_SCRIPT_NAME $EasyLOG_SCRIPT_NAMEINFO\n\
 -- Created with EasyLOG \n\
 -- Version: $VERSION by Jason Regula \n\
 -- DATE: $CURRENTDATE TIME: $CURRENTTIME \n\
