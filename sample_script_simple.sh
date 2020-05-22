@@ -1,8 +1,8 @@
 #!/bin/sh
-## sample script for EasyLOG.sh
+## simple sample script for EasyLOG.sh
 ## version 0.0.2 By Jason Regula
 
-SCRIPT_NAME="sample_script.sh"
+SCRIPT_NAME="sample_script_simple.sh"
 
 ## Config for log output.
 LOGFILE_DATA="\

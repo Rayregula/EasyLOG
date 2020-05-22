@@ -1,27 +1,40 @@
 # EasyLOG
 ## Shell script for easily creating log files.
 ### Usage:
-1. Create a variable in your own script to replace defualt `EasyLOG_DATA` and any additional options you want. <br/>
+1. Create a variable in your own script to replace default `EasyLOG_DATA` and any additional options you want. <br/>
 1. Overwrite default values and call EasyLOG.sh: `<EasyLOG Variable>=<User_Variable> [...] ./EasyLOG.sh`
 
 
-###### When creating a variable to override the defualt `EasyLOG_DATA` or `EasyLOG_HEADER` place a: "\n\\" after a string to create a new line in the log file.
+###### When creating a variable to override the default `EasyLOG_DATA` or `EasyLOG_HEADER` place a: "\n\\" after a string to create a new line in the log file.
 
 ##### [See Examples Below:](https://github.com/Rayregula/EasyLOG#examples) 
 
  
 ## User Writable Values:
 ###### Variables below are able to be freely customized on a per script basis:
- `EasyLOG_NAME` = Filename for the log file. <br/>
+ `EasyLOG_FILENAME` = Filename for the log file. <br/>
  `EasyLOG_DIR` = Log File Directory. <br/>
  `EasyLOG_SCRIPT_NAME` = Name of the script the log was created for. <br/>
  `EasyLOG_HEADER` = Used to create a custom log header <br/>
- `EasyLOG_DATA` = Information contained in the log <br/>
+ `EasyLOG_DATA` = Information contained in the first block of log <br/>
+ `EasyLOG_DATA2`= Information contained in the second block of log <br/>
  
  
+## Log Fortmat:
+###### Log file is formatted as follows:
+
+ * `EasyLOG_HEADER`
+ * 
+ * `EasyLOG_DATA`
+ * 
+ * `EasyLOG_DATA2`
+ * 
+ * `EasyLOG_DATA3`
+ 
+
 ## Default Values:
 ###### Values are as follows if you choose not to override them:
- `EasyLOG_NAME` = `EasyLOG-latest_$CURRENTDATE.txt` <br/>
+ `EasyLOG_FILENAME` = `$EasyLOG_SCRIPT_NAME_$CURRENTDATE.txt` <br/>
  `EasyLOG_DIR` = `$HOME/Documents/LOGS/` <br/>
  `EasyLOG_SCRIPT_NAME` = `EasyLOG.sh` <br/>
 
@@ -34,11 +47,14 @@
 	-- DATE: $CURRENTDATE TIME: $CURRENTTIME \n\
 	################################# \n\
 	
- `EasyLOG_DATA` = Information contained in the log <br/>
+ `EasyLOG_DATA` = [Default Help Info] <br/>
+ `EasyLOG_DATA2` = [Left Blank] <br/>
+ `EasyLOG_DATA3` = [Left Blank] <br/>
 
-
+---
 ## Examples:
-### Running the following script:
+### Simple Example:
+#### Running the following script:
 ```bash
 #!/bin/sh
 ## sample script for EasyLOG.sh
@@ -56,7 +72,7 @@ The script working Directory is: $(pwd) \n\
 ## Overwrite EasyLOG built-in values and call script.
 EasyLOG_SCRIPT_NAME=$SCRIPT_NAME EasyLOG_DATA=$LOGFILE_DATA ./EasyLOG.sh
 ```	
-### Will create a log with the following:
+#### Will create a log with the following:
 
 ```
 ################################# 
@@ -72,3 +88,10 @@ This is a sample log file:
 Current User is jason
 The script working Directory is: /Users/jason/Documents/Projects/EasyLOG
 ``` 
+---
+### Advanced Sample:
+
+---
+### Practical Sample:
+
+---
