@@ -165,7 +165,7 @@ $CONFIG_FOR_EasyLOG
 
 #### Will create a log with the following:
 
-```bash
+```
 ################################# 
 -- Log file for: sample_script_advanced.sh (version: 0.0.4)
 -- Created with EasyLOG 
