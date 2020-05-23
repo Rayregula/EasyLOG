@@ -94,23 +94,21 @@ EasyLOG_SCRIPT_NAME=$SCRIPT_NAME EasyLOG_DATA=$LOGFILE_DATA ./EasyLOG.sh
 ################################# 
 -- Log file for: sample_script_simple.sh 
 -- Created with EasyLOG 
--- Version: v0.0.9 by Jason Regula 
--- DATE: 05-22-2020 TIME: 04:01 PM 
+-- Version: v0.1.1 by Jason Regula 
+-- DATE: 05-22-2020 TIME: 05:53 PM 
 ################################# 
 
 
 This is a sample log file 
 
 Current User is jason 
-The script working Directory is: /Users/jason/Documents/Stuff/scripting/Projects/EasyLOG 
+The script working Directory is: /Users/jason/Documents/Projects/EasyLOG 
 
 
 
 
 
-
-
-## End of Log File
+## End of Log File 
 ## Check out the EasyLOG Project on Github <3 
 ## https://github.com/Rayregula/EasyLOG
 ``` 
@@ -169,15 +167,15 @@ $CONFIG_FOR_EasyLOG
 ################################# 
 -- Log file for: sample_script_advanced.sh (version: 0.0.4)
 -- Created with EasyLOG 
--- Version: v0.1.0 by Jason Regula 
--- DATE: 05-22-2020 TIME: 16:10 
+-- Version: v0.1.1 by Jason Regula 
+-- DATE: 05-22-2020 TIME: 18:08 
 ################################# 
 
 
 This is a sample log file 
 
-Current User is jregula 
-The script working Directory is: /Users/jregula/Documents/Stuff/scripting/Projects/EasyLOG 
+Current User is jason
+The script working Directory is: /Users/jason/Documents/Projects/EasyLOG 
 
 
 You can pass data from existing variables 
@@ -187,12 +185,13 @@ plain data may also be assigned directly to an EasyLOG variable if it's easier t
 <3 Jason 
 
 
-current time/date is: Fri May 22 16:10:40 AKDT 2020
+current time/date is: Fri May 22 18:08:42 AKDT 2020
 
 
 ## End of Log File 
 ## Check out the EasyLOG Project on Github <3 
 ## https://github.com/Rayregula/EasyLOG
+
 ```
 ---
 ### Practical Sample:
