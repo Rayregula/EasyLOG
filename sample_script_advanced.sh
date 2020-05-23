@@ -33,10 +33,10 @@ EasyLOG_SCRIPT_NAME=$SCRIPT_NAME \
 USE24HOUR=true \
 EasyLOG_SCRIPT_NAMEINFO="(version: $VERSION)" \
 EasyLOG_DIR=$DIRFORLOGS \
-EasyLOG_DATA=$LOGFILE_DATA \
-EasyLOG_DATA2=$LOGFILE_DATA2 \
-EasyLOG_DATA3="current time/date is: $(date)" \
+EasyLOG_DATABLOCK=$LOGFILE_DATA \
+EasyLOG_DATABLOCK2=$LOGFILE_DATA2 \
+EasyLOG_DATABLOCK3="current time/date is: $(date)" \
 ./EasyLOG.sh
 
-## run veriable
+## run variable
 $CONFIG_FOR_EasyLOG
