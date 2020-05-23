@@ -3,7 +3,7 @@
 ## by defining which arguments to print and then calling the script
 ## v0.0.8 By Jason Regula
 
-VERSION="v0.1.0"
+VERSION="v0.1.1"
 CURRENTDATE=$(date "+%m-%d-%Y") # current date
 CURRENTTIME=$(date "+%I:%M %p") # current time 12 hour clock
 CURRENTTIME24=$(date "+%H:%M") # current time 24 hour clock
@@ -40,13 +40,19 @@ EasyLOG_DATABLOCK=${EasyLOG_DATABLOCK:-"\
 # Overwrite values in your own script. end lines with <backslash n backslash> \n\
 # \n\
 # From within your script you can use: <EasyLOG_DATABLOCK=\$CUSTOM_FUNCTION> ./easylog.sh \n\
-# for any of the veriables below to set yoru own values. \n\
+# for any of the variables below to set your own values. \n\
 # \n\
-# EasyLOG_NAME=Log_\$CURRENTDATE.txt #Name the log file will be saved with. \n\
-# EasyLOG_DIR=\$HOME/Documents/LOGS/ #Location files will be created. \n\
-# EasyLOG_SCRIPT_NAME=\${EasyLOG_SCRIPT_NAME:-EasyLOG.sh} #name of script that the log file was created by. \n\
-# EasyLOG_HEADER= #how the top of the log file will appear. \n\
-# EasyLOG_DATABLOCK= #the informaition to be entered in the body of the log file. \n\
+# EasyLOG_FILENAME = Filename for the log file. \n\
+# EasyLOG_DIR = Log File Directory. \n\
+# EasyLOG_SCRIPT_NAME = Name of the script the log was created for. \n\
+# EasyLOG_SCRIPT_NAMEINFO = Used just after the script name in the default header (for a version number or the like) \n\
+# EasyLOG_HEADER = Used to create a custom log header \n\
+# EasyLOG_DATA = Information contained in the first block of log \n\
+# EasyLOG_DATA2= Information contained in the second block of log \n\
+# USE24HOUR = use 24 hour time format instead of the default 12 hour with AM/PM \n\
+# SHOW_EasyLOG_END = show end of file string \n\
+# EasyLOG_END = contents of end log string \n\
+# \n\
 # See the README here: https://github.com/Rayregula/EasyLOG/blob/master/README.md
 "}
 
@@ -63,21 +69,19 @@ EasyLOG_END=${EasyLOG_END:-"\
 ## https://github.com/Rayregula/EasyLOG
 "}
 
-## clear EasyLOG_END if SHOW_EasyLOG_END is set to false
-[ $SHOW_EasyLOG_END == false ] && EasyLOG_END=""
 
 ## you can reformat the log files here
 function LOG_FORMAT() {
-  echo $EasyLOG_HEADER
+  [ ! -z "$EasyLOG_HEADER" ] && echo $EasyLOG_HEADER
   echo ""
-  echo $EasyLOG_DATA
+  [ ! -z "$EasyLOG_DATABLOCK" ] && echo $EasyLOG_DATABLOCK
   echo ""
-  echo $EasyLOG_DATA2
+  [ ! -z "$EasyLOG_DATABLOCK2" ] && echo $EasyLOG_DATABLOCK2
   echo ""
-  echo $EasyLOG_DATA3
+  [ ! -z "$EasyLOG_DATABLOCK3" ] && echo $EasyLOG_DATABLOCK3
   echo ""
   echo ""
-  echo $EasyLOG_END
+  [ "$SHOW_EasyLOG_END" == "true" ] && echo $EasyLOG_END
 
 }
 
