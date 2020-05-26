@@ -3,6 +3,7 @@
 ## by defining which arguments to print and then calling the script
 ## v0.0.8 By Jason Regula
 
+
 VERSION="v0.1.1"
 CURRENTDATE=$(date "+%m-%d-%Y") # current date
 CURRENTTIME=$(date "+%I:%M %p") # current time 12 hour clock
@@ -71,6 +72,7 @@ EasyLOG_END=${EasyLOG_END:-"\
 
 
 ## you can reformat the log files here
+
 function LOG_FORMAT() {
   [ ! -z "$EasyLOG_HEADER" ] && echo $EasyLOG_HEADER
   echo ""
@@ -83,6 +85,7 @@ function LOG_FORMAT() {
   echo ""
   [ "$SHOW_EasyLOG_END" == "true" ] && echo $EasyLOG_END
 
+
 }
 
 function CREATE_LOG() {
@@ -91,6 +94,7 @@ function CREATE_LOG() {
 
 echo ""
 echo "Log file created at $EasyLOG_DIR with name: $EasyLOG_FILENAME"
+
 
 CREATE_LOG
 exit 0

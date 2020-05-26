@@ -37,6 +37,18 @@
  * 
  * `EasyLOG_END`
  
+## Log Fortmat:
+###### Log file is formatted as follows:
+
+ * `EasyLOG_HEADER`
+ * 
+ * `EasyLOG_DATA`
+ * 
+ * `EasyLOG_DATA2`
+ * 
+ * `EasyLOG_DATA3`
+ 
+
 ## Default Values:
 ###### Default values are as follows if you choose not to override them:
  `EasyLOG_FILENAME` = `$EasyLOG_SCRIPT_NAME_$CURRENTDATE.txt` <br/>
@@ -66,6 +78,7 @@
 ## https://github.com/Rayregula/EasyLOG
  ```
 
+
 ---
 ## Examples:
 ### Simple Example:
@@ -89,6 +102,7 @@ The script working Directory is: $(pwd) \n\
 EasyLOG_SCRIPT_NAME=$SCRIPT_NAME EasyLOG_DATA=$LOGFILE_DATA ./EasyLOG.sh
 ```	
 #### Will create a log with the following:
+
 
 ```
 ################################# 
@@ -163,6 +177,7 @@ $CONFIG_FOR_EasyLOG
 
 #### Will create a log with the following:
 
+
 ```
 ################################# 
 -- Log file for: sample_script_advanced.sh (version: 0.0.4)
@@ -175,6 +190,7 @@ $CONFIG_FOR_EasyLOG
 This is a sample log file 
 
 Current User is jason
+
 The script working Directory is: /Users/jason/Documents/Projects/EasyLOG 
 
 
@@ -193,6 +209,7 @@ current time/date is: Fri May 22 18:08:42 AKDT 2020
 ## https://github.com/Rayregula/EasyLOG
 
 ```
+
 ---
 ### Practical Sample:
 

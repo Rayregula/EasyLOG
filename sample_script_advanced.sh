@@ -6,6 +6,7 @@ VERSION="0.0.4"
 SCRIPT_NAME="sample_script_advanced.sh"
 DIRFORLOGS="$HOME/Documents/myeasylogs/"
 
+
 ## Config for log output.
 LOGFILE_DATA="\
 This is a sample log file \n\
@@ -23,6 +24,7 @@ plain data may also be assigned directly to an EasyLOG variable if it's easier t
 \n\
 <3 Jason \n\
 "
+
 
 ## Overwrite EasyLOG built-in values and call script.
 ## if you have a bunch of things to override it makes it a lot cleaner to escape your newlines.
