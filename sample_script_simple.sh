@@ -1,6 +1,6 @@
 #!/bin/sh
 ## simple sample script for EasyLOG.sh
-## version 0.0.2 By Jason Regula
+## version 0.0.3 By Jason Regula
 
 SCRIPT_NAME="sample_script_simple.sh"
 
