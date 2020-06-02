@@ -37,16 +37,6 @@
  * 
  * `EasyLOG_END`
  
-## Log Fortmat:
-###### Log file is formatted as follows:
-
- * `EasyLOG_HEADER`
- * 
- * `EasyLOG_DATA`
- * 
- * `EasyLOG_DATA2`
- * 
- * `EasyLOG_DATA3`
  
 
 ## Default Values:
