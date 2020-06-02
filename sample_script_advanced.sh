@@ -1,5 +1,5 @@
 #!/bin/sh
-## advanced_sample script for EasyLOG.sh
+## advanced sample script for EasyLOG.sh
 ## version 0.0.4 By Jason Regula
 
 VERSION="0.0.4"
